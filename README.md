@@ -1,8 +1,10 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <h1 align="center">
-  Gatsby's hello-world starter
+  Community lab
 </h1>
+
+<p>Free seminar for beginners Frontend-developers and mentors who want learning students.</p>
 
 ## 🚀 Quick start
 
