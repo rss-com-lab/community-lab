@@ -15,7 +15,7 @@
     ```sh
     npm install
     npm run develop
-    ``
+    
 
 ## 🧐 What's inside?
 
