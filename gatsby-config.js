@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Community lab',
-    author: 'Dmitriy Paromenko'
+    author: 'Dmitriy Paromenko',
+    description: 'Free seminar for beginners Frontend-developers and mentors who want learning students.'
   },
   plugins: [
     {

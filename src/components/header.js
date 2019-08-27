@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 // import './header.module.scss'
-import headerStyles from './header.module.scss'
+import headerStyles from './scss/header.module.scss'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
