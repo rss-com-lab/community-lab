@@ -1,43 +1,45 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 
-// import './header.module.scss'
 import headerStyles from './scss/header.module.scss'
 
+const scrollToElement = require('scroll-to-element');
+
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
+  
+  const handleLinkClick = (e, target) => {
+
+    if (typeof window !== undefined) {
+      if (window.location.pathname === '/') {
+        e.preventDefault()
+        scrollToElement(target, {
+          offset: 0,
+          ease: "out-cube",
+          duration: 2000,
+        })
       }
     }
-  `)
+
+  }
 
   return (
     <header className={headerStyles.header}>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">Home</Link>
+            <a className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} href='#section1'>Home</a>
           </li>
           <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">Blog</Link>
+            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="#section2">About</Link>
           </li>
           <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">About</Link>
+            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section3')} to="#section3" > Experience </Link>
           </li>
           <li>
             <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
     </header>
   )
 }

@@ -16,9 +16,11 @@
     "gatsby": "^2.13.67",
     "gatsby-image": "^2.2.14",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "scroll-to-element": "^2.0.3"
   },
   "devDependencies": {
+    "bootstrap-scss": "^4.3.1",
     "env-cmd": "^9.0.3",
     "gatsby-plugin-react-helmet": "^3.1.5",
     "gatsby-plugin-sass": "^2.1.11",
@@ -28,7 +30,8 @@
     "gatsby-transformer-sharp": "^2.2.12",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-scrollable-anchor": "^0.6.1"
   },
   "repository": {
     "type": "git",
