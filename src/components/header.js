@@ -24,22 +24,27 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <a className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} href='#section1'>Home</a>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="#section2">About</Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section3')} to="#section3" > Experience </Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className={headerStyles.container}>
+        <nav>
+          <ul className={headerStyles.navList}>
+            <li>
+              <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section1')} to="#section1" > О нас </Link>
+            </li>
+            <li>
+              <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section2')} to="#section2" > Преимущества </Link>
+            </li>
+            <li>
+              <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section3')} to="#section3" > Принцип работы </Link>
+            </li>
+            <li>
+              <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section4')} to="#section4" > Наши проекты </Link>
+            </li>
+            <li>
+              <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section5')} to="#section5" > Контакты </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

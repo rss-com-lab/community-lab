@@ -1,7 +1,9 @@
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: 'Community lab',
-    author: 'Dmitriy Paromenko',
+    author: 'Dmitriy Parhomenko',
     description: 'Free seminar for beginners Frontend-developers and mentors who want learning students.'
   },
   plugins: [
@@ -12,9 +14,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [
+          autoprefixer({
+            grid: true,
+            browsers: ['last 2 version'],
+          }),
+        ],
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
