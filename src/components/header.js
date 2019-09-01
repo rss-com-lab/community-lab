@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Button from './button'
 import headerStyles from './scss/header.module.scss'
 
 const scrollToElement = require('scroll-to-element');
@@ -24,7 +25,7 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <div className={headerStyles.container}>
+      <div className="container">
         <nav>
           <ul className={headerStyles.navList}>
             <li>
@@ -42,6 +43,7 @@ const Header = () => {
             <li>
               <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} onClick={e => handleLinkClick(e, '#section5')} to="#section5" > Контакты </Link>
             </li>
+            <Button title="Подать заявку" />
           </ul>
         </nav>
       </div>
